@@ -1,0 +1,59 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Review #<%= @review.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Image</dt>
+              <dd><%= @review.image %></dd>
+
+              <dt>Street address</dt>
+              <dd><%= @review.street_address %></dd>
+
+              <dt>Year completed</dt>
+              <dd><%= @review.year_completed %></dd>
+
+              <dt>Month completed</dt>
+              <dd><%= @review.month_completed %></dd>
+
+              <dt>Cost</dt>
+              <dd><%= @review.cost %></dd>
+
+              <dt>Relationship</dt>
+              <dd><%= @review.relationship %></dd>
+
+              <dt>Review</dt>
+              <dd><%= @review.review %></dd>
+
+              <dt>Rating</dt>
+              <dd><%= @review.rating %></dd>
+
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <a href="/reviews" class="btn btn-primary">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+
+              <a href="/reviews/<%= @review.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+
+              <a href="/delete_review/<%= @review.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
