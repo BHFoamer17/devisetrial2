@@ -57,6 +57,8 @@ Rails.application.routes.draw do
   # # READ
   get "/service_providers", :controller => "service_providers", :action => "index"
   get "/service_providers/:id", :controller => "service_providers", :action => "show"
+  get "/service_providers/:id/customer_review", :controller => "service_providers", :action => "customer_review"
+  get "/service_providers/:id/service_provider_project", :controller => "service_providers", :action => "service_provider_project"
 
   # # UPDATE
   get "/service_providers/:id/edit", :controller => "service_providers", :action => "edit"

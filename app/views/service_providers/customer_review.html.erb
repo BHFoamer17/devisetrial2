@@ -31,7 +31,35 @@
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
-</body>
 
+  <!-- REVIEWS -->
+
+  <div class="container">
+    <h2>Reviews for <%= @service_provider.company_name %></h2>
+      <div class="row">
+        <% @service_provider.reviews.each do |review| %>
+          <div class="col-sm-8">
+            <div class="thumbnail">
+              <h4 class="thumbnail-title"></h4>
+              <div class="thumbnail-body">
+                <dl>
+                  <dd>User Name</dd>
+
+                  <dt>Project Date:</dt>
+                  <dd><%= review.try(:month_completed) %><%= review.try(:year_completed) %></dd>
+
+                  <dt>Project Cost:</dt>
+                  <dd><%= review.cost %></dd>
+
+                  <dt>Review:</dt>
+                  <dd><%= review.review %></dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</body>
 
 

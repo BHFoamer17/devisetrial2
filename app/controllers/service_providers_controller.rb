@@ -1,14 +1,22 @@
 class ServiceProvidersController < ApplicationController
   skip_before_action :authenticate_service_provider!, :only =>[:index, :show,]
 
-  def index
+    def index
 
-  end
+    end
 
-  def show
+    def show
       @service_provider = ServiceProvider.find(params[:id])
       @review = Review.new
+    end
 
+    def customer_review
+      @service_provider = ServiceProvider.find(params[:id])
+      @service_provider = current_service_provider
+    end
+
+    def service_provider_project
+      @service_provider = ServiceProvider.find(params[:id])
     end
 
     def new
