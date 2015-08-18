@@ -8,6 +8,7 @@ class ServiceProvidersController < ApplicationController
     def show
       @service_provider = ServiceProvider.find(params[:id])
       @review = Review.new
+
     end
 
     def customer_review
